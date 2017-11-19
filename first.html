@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learning Vuejs</title>
+	<script src="https://unpkg.com/vue"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div id="hello" class="op">
+		<h1 class="op-h"> Hello World </h1>
+	  	{{ message }}
+	</div>
+
+	<div id="hello2" class="op">
+		<h1 class="op-h"> Hello Vue</h1>
+		{{ vue }}
+	</div>
+
+	<div id="bind" class="op">
+		<h1 class="op-h">V-bind</h1>
+		<span v-bind:title="bind_text">Hover here to see message as title bind by b-bind. </p>
+	</div>	
+
+	<div id="seen" class="op">
+		<h1 class="op-h">If Condition</h1>
+		<span v-if='seen'>You can see me, Because seen is true</span>
+	</div>
+
+	<div id="list" class="op">
+		<h1 class="op-h">For Loop</h1>
+		<ol>
+			<li v-for="todo in todos">{{todo.text}}</li>
+		</ol>
+	</div>
+
+	<div id="revers" class="op">
+		<h1 class="op-h">{{ message }}</h1>
+		<button v-on:click=reverseText>Reverse</button>
+	</div>
+
+	<div id="input-value" class="op">
+		<h1 class="op-h">Work with input</h1>
+		<p>{{ input_value }}</p>
+		<input type="text" v-model="input_value">
+	</div>
+
+	<div id="component" class="op">
+		<h1 class="op-h">Work with Components</h1>
+		<ol>
+			<to-do 
+				v-for="grocery in groceries" 
+				v-bind:todo = "grocery"
+				v-bind:key = "grocery.id"
+			></to-do>
+		</ol>
+	</div>
+
+	<div id="component2" class="op">
+		<h1 class="op-h">TRY COMPONENT AGAIN</h1>
+		<ol>
+			<name 
+			v-for = "name in names"
+			v-bind:key = "name.id"
+			v-bind:name = "name"
+			/>
+		</ol>
+	</div>
+
+<script src="js/vue-script.js"></script>
+</body>					
+</html>
