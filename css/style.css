@@ -1,5 +1,12 @@
+.ph{
+    font-size: 2.2em;
+    color: #42b983;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 40px;
+}
 .op{
-	border: 1px solid #eee;
+	border: 1px solid #42b983;
     border-radius: 2px;
     padding: 25px 35px;
     margin-top: 1em;
@@ -10,7 +17,7 @@
     -ms-user-select: none;
     user-select: none;
     overflow-x: auto;
-    width: 26%;
+    width: 40%;
     background-color: #f8f8f8;
     float: left;
     margin: 10px
