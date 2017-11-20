@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learning Vuejs</title>
+	<script src="./js/vue.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+</head>
+
+<body>
+	<p class="ph">Conditional Rendering</p>
+	
+	<div id="list1" class="op">
+		<h1 class="op-h">Mapping an Array to Elements with v-for</h1>
+		<ul>{{parrent}}
+			<li v-for="(item, i ) in items" :key="item.id">
+				{{ parrent }} No {{ ++i }} {{ item.message }}
+			</li>
+		</ul>
+	</div>
+
+	<div id="list2" class="op">
+		<h1 class="op-h">v-for with an object</h1>
+		<ul >
+			<li v-for="(value, key,i ) in object" >
+				{{ ++i }} - {{ key }} : {{ value }}
+			</li>
+		</ul>
+	</div>
+
+
+	<div id="list3" class="op">
+		<h1 class="op-h">Mutation Methods</h1>
+		<ul>
+			<li v-for="(item, i ) in items" v-bind:key="item.id">
+				{{ ++i }} {{ item.name }}
+			</li>
+		</ul>
+	</div>
+	
+	<div id="list4" class="op">
+		<h1 class="op-h">Computed Even Numbers</h1>
+		<ul>
+			<li v-for="number in evenNumbers" v-bind:key="number.id">
+				{{ number }}
+			</li>
+		</ul>
+	</div>
+
+	<div id="list5" class="op">
+		<h1 class="op-h">Methods Odd Numbers</h1>
+		<ul>
+			<li v-for="n in odd(numbers)" v-bind:key="n.id">
+				{{ n }}
+			</li>
+		</ul>
+	</div>
+
+	<div id="list6" class="op">
+		<h1 class="op-h">v-for with v-if</h1>
+		<ul>
+			<li v-for="nf in 14" v-if ="(nf%2 === 0)">{{ nf }} </li>
+		</ul>
+	</div>
+
+<script src="./js/list-rendering.js"></script>
+</body>					
+</html>
