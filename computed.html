@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learning Vuejs</title>
+	<script src="./js/vue.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+</head>
+<body>
+	<p class="ph">Computed Properties and Watchers</p>
+
+	<div id="computed1" class="op">
+		<h1 class="op-h"> Computed Properties  </h1>
+	  	<p>This is original text: {{ message }}</p>
+	  	<p>This is rversed text: {{ reverseString }}</p>
+	  	<p>This is rversed text: {{ reverseMessage() }}</p>
+	  	<p>This is rversed text: {{ now }}</p>
+	</div>
+
+	<div id="computed2" class="op">
+		<h1 class="op-h"> Computed vs Watched Properties  </h1>
+	  	<p>This is original text: {{ fullName }}</p>
+	</div>
+
+	<div id="computed3" class="op">
+		<h1 class="op-h"> Computed Setter </h1>
+	  	<p>This is original text: {{ fullName }}</p>
+	</div>
+	
+<script src="./js/computed.js"></script>
+</body>					
+</html>
