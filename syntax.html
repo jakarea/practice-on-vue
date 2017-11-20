@@ -52,8 +52,9 @@
 
 	<div id="syntex8" class="op">
 		<h1 class="op-h"> Modifiers and Shorthands </h1>
-		<form action={{url}} method="get" v-on:submit.prevent="onSubmit">
+		<form method="get" v-on:submit.prevent="onSubmit" :action="url">
 			<input type="submit" name="" value="Submit">
+			<a @click="doSomething">Click Me</a>
 		</form>
 	</div>
 

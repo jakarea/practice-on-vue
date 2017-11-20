@@ -64,6 +64,9 @@ var syntex8 = new Vue({
 	methods : {
 		onSubmit: function(){
 			alert('Thanks for try!')
+		},
+		doSomething : function(){
+			alert('What I will do!')
 		}
 	}
 })
