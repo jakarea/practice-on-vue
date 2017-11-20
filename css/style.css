@@ -1,3 +1,16 @@
+*{
+    line-height: 1.6em;
+    margin: 1.2em 0 -1.2em;
+    padding-bottom: 1.2em;
+    position: relative;
+    z-index: 1;
+    color: #34495e;
+    font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+    font-size: 15px;
+}
+body{
+    margin: 0 auto;
+}
 .ph{
     font-size: 2.2em;
     color: #42b983;
@@ -9,18 +22,16 @@
 	border: 1px solid #42b983;
     border-radius: 2px;
     padding: 25px 35px;
-    margin-top: 1em;
-    margin-bottom: 40px;
     line-height: 1.5em;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
     overflow-x: auto;
-    width: 40%;
+    width: 41%;
     background-color: #f8f8f8;
     float: left;
-    margin: 10px
+    margin: 20px
 }	
 .op-h{
 	font-size: 1.2em;

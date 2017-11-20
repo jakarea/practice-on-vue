@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learning Vuejs</title>
+	<script src="./js/vue.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+</head>
+<body>
+	<p class="ph">Template Syntax</p>
+	<div class="op">
+		<h1 class="op-h"> Interpolation  </h1>
+	  	<span id="syntex1">{{ mess }}</span>
+	</div>
+	
+	<div class="op">
+		<h1 class="op-h"> v-once  </h1>
+	  	<span id="syntex2" v-once>{{ message }}</span>
+	</div>
+
+	<div id="syntex3" class="op">
+		<h1 class="op-h"> raw html  </h1>
+	  	<span>{{ rawHtml }}</span><br>
+	  	<span v-html="rawHtml"></span>
+	</div>
+
+	<div id="syntex4" class="op">
+		<h1 class="op-h"> Bind Attributes </h1>
+	  	<span v-bind:id="dynamicId">This span tag has a dynamic id!</span>
+	</div>
+	
+	<div id="syntex5" class="op">
+		<h1 class="op-h">  Boolean attributes </h1>
+	  	<button v-bind:dissabled="isDissable">Button </button>
+	</div>
+
+	<div id="syntex6" class="op">
+		<h1 class="op-h"> JavaScript Expressions </h1>
+		{{ number + 1 }}<br>
+		{{ ok ? message:'No Message'}}<br>
+		<span v-bind:id="id"> {{ message.split('').reverse('').join('') }}</span>
+	</div>
+	
+	<div id="syntex7" class="op">
+		<h1 class="op-h"> Directives and Argument </h1>
+		<p v-if="seen">You are seeing it, Because seen is true!</p>
+		<a v-bind:href="url">Jakarea Parvez</a><br>
+		<span v-on:click="doPopUp">Click Me!</a>
+	</div>
+
+	<div id="syntex8" class="op">
+		<h1 class="op-h"> Modifiers and Shorthands </h1>
+		<form action={{url}} method="get" v-on:submit.prevent="onSubmit">
+			<input type="submit" name="" value="Submit">
+		</form>
+	</div>
+
+	
+
+<script src="./js/syntax.js"></script>
+</body>					
+</html>
