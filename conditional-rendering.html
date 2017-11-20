@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learning Vuejs</title>
+	<script src="./js/vue.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+</head>
+
+<body>
+	<p class="ph">Conditional Rendering</p>
+
+	<div id="condition1" class="op">
+		<h1 class="op-h"> if else  </h1>
+	  	<p v-if="ok"> Ok is true</p>
+	  	<p v-else> Ok is false</p>
+
+	  	<div v-if="Math.random() > 0.5">
+		  Now you see me
+		</div>
+		<div v-else>
+		  Now you don't
+		</div>
+	</div>
+	
+	<div id="condition2" class="op">
+		<h1 class="op-h"> Condition in template  </h1>
+		<template v-if="ok">
+	  		<p> Ok is true</p>
+	  		<p> Ok is false</p>
+	  	</template>
+	</div>
+
+	<div id="condition3" class="op">
+		<h1 class="op-h">Conditional form</h1>
+		<template v-if="type">
+			<label for="user-name">UserName</label>
+			<input type="text" name="user-name" placeholder="Enter Username....">
+		</template>
+
+		<template v-else>
+			<label for="email">Email</label>
+			<input type="text" name="email" placeholder="Enter Email....">
+		</template>
+		<br>
+		<button v-on:click="changeType()">Toggle Login Type</button>
+	</div>
+
+<script src="./js/conditional-rendering.js"></script>
+</body>					
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learning Vuejs</title>
+	<script src="./js/vue.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+</head>
+<body>
+	<p class="ph">Computed Properties and Watchers</p>
+
+	<div id="styles1" class="op">
+		<h1 class="op-h"> Binding HTML Classes  </h1>
+	  	<div class="static"
+		     v-bind:class="{ active: isActive, 'text-danger': hasError }">Hello classes
+		</div>
+
+		<div :class="classObject">Another way to bind class </div>
+
+		<div :class="eObject">Computed classObject</div>
+	</div>
+
+
+	<div id="styles2" class="op">
+		<h1 class="op-h"> Array of Classes  </h1>
+	  	<div 
+		    v-bind:class="[isActive ? activeClass : '', my, e]">Hello array classes
+		</div>
+	</div>
+
+	<div id="styles3" class="op">
+		<h1 class="op-h"> Add Class to root componnet</h1>
+	  	<my-component></my-component>
+	</div>
+	
+<script src="./js/class-style.js"></script>
+</body>					
+</html>
