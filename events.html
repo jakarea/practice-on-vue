@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learning Vuejs</title>
+	<script src="./js/vue.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+</head>
+
+<body>
+	<p class="ph">Events</p>
+
+	<div id="events1" class="op">
+		<h1 class="op-h">Listening to Events</h1>
+		<p>You clicked this button {{ counter }} time(s)</p>
+		<button v-on:click="counter += 1">Click Me</button>
+	</div>
+
+	<div id="events2" class="op">
+		<h1 class="op-h">Method Event Handlers</h1>
+		
+		<button v-on:click="greet">Get Me</button>
+	</div>
+
+	<div id="events3" class="op">
+		<h1 class="op-h">Methods in Inline Handlers</h1>
+		
+		<button @click="say('Hello')">Hello</button>
+		<button @click="say('hi')">Hi</button>
+		<button @click="say('Prevent Default',$event)">Submit</button>
+	</div>
+
+	<div id="events4" class="op">
+		<h1 class="op-h">Event Modifiers</h1>
+		
+		<button @click.stop="doThis">Stop</button>
+		<button @click.once="doThis">Once</button>
+		<button @click.prevent="doThis">Prevent</button>
+		<button @click.self="doThis">Self</button>
+		<button @click.capture="doThis">Catpure</button>
+	</div>
+<script src="./js/events.js"></script>
+</body>					
+</html>

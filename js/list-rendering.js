@@ -79,6 +79,3 @@ var list6 = new Vue({
 	el : '#list6'
 });
 
-var List7 = new Vue({
-	el : '#list7'
-});

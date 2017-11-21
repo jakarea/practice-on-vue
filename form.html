@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Learning Vuejs</title>
+      <script src="./js/vue.js"></script>
+      <link rel="stylesheet" type="text/css" href="./css/style.css">
+      <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="./img/favicon-96x96.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+   </head>
+   <body>
+      <div class="container-fluid">
+         <div class="row">
+            <p class="ph">Form Input Bindings</p>
+         </div>
+         <div id="form1" class="op">
+            <h1 class="op-h"> Text </h1>
+            <input v-model="message" placeholder="Edit me">
+            <p >Input Value: {{ message }}</p>
+            <textarea v-model="messageMl" placeholder="add multiple lines"></textarea>
+            <p>Multiline message is:</p>
+            <p style="white-space: pre-line;">{{ messageMl }}</p>
+         </div>
+         <div id="form2" class="op">
+            <h1 class="op-h"> Checkbox </h1>
+            <input type="checkbox" id="checkbox" v-model="checked">
+            <label for="checkbox">{{ checked }}</label>
+            <br/>
+            <input type="checkbox" id="vuejs" value="vue.js" v-model='checkeds'>
+            <label for="vuejs">Vue.js</label>
+            <input type="checkbox" id="react" value="React" v-model='checkeds'>
+            <label for="react">React</label>
+            <input type="checkbox" id="VanilaJs" value="VanilaJs" v-model='checkeds'>
+            <label for="VanilaJs">VanilaJs</label>
+            <input type="checkbox" id="Angulular" value="Angulular" v-model='checkeds'>
+            <label for="Angulular">Angulular</label><br/>
+            Checked Value {{ checkeds }}
+         </div>
+         <div id="form3" class="op">
+            <h1 class="op-h"> Radio </h1>
+            <input type="radio" id="one" value="One" v-model="picked">
+            <label for="one">One</label>
+            <br>
+            <input type="radio" id="two" value="Two" v-model="picked">
+            <label for="two">Two</label>
+            <br>
+            <span>Picked: {{ picked }}</span>
+         </div>
+         <div id="form4" class="op">
+            <h1 class="op-h"> Select </h1>
+            <select v-model="selected">
+               <option disabled value="">Please select one</option>
+               <option>A</option>
+               <option>B</option>
+               <option>C</option>
+            </select>
+            <br>
+            <span>Selected: {{ selected }}</span>
+         </div>
+         <div id="form5" class="op">
+            <h1 class="op-h"> Multiple Select </h1>
+            <select v-model="m_selected" multiple>
+               <option disabled value="">Please select one</option>
+               <option>A</option>
+               <option>B</option>
+               <option>C</option>
+               <option>D</option>
+               <option>E</option>
+               <option>F</option>
+            </select>
+            <br>
+            <span>Selected: {{ m_selected }}</span>
+         </div>
+
+         <div id="form6" class="op">
+            <h1 class="op-h"> Select Value Binding </h1>
+            <select v-model="d_selected">
+               <option v-for="option in options" v-bind:value="option.value">
+                  {{ option.text }}
+               </option>
+            </select>
+            <br>
+            <span>Selected: {{ d_selected }}</span>
+         </div>
+
+        <div id="form7" class="op">
+            <h1 class="op-h"> Modifiers </h1>
+            <input v-model.lazy.trim="lazy_message" placeholder="Edit me">
+            <p>Input Value: {{ lazy_message }}</p>
+
+            <input v-model.number="age" placeholder="Enter your age">
+            <p>Your Age: {{ age }}</p>
+         </div>
+
+      </div>
+      <script src="./js/form.js"></script>
+   </body>
+</html>
