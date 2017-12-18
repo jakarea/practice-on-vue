@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Learning Vuejs</title>
+      <script src="./js/vue.js"></script>
+      <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+      <link rel="stylesheet" type="text/css" href="./css/style.css">
+      <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="./img/favicon-96x96.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+      <style type="text/css">
+         .fade-enter-active, .fade-leave-active {
+            transition: opacity 2s
+         }
+
+         .fade-enter, .fade-leave-to {
+           opacity: 0
+         }
+
+
+         .slide-fade-enter-active {
+           transition: all .8s ease;
+         }
+         .slide-fade-leave-active {
+           transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+         }
+         .slide-fade-leave-to
+         /* .slide-fade-leave-active below version 2.1.8 */ {
+           transform: translateX(-100px);
+           opacity: 0;
+         }
+         .slide-fade-enter {
+            transform: translateX(-100px);
+            opacity: 0;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="container-fluid">
+         <div class="row">
+            <p class="ph">Animation and transition</p>
+         </div>
+
+         <div class="row">
+            <div id="animation1" class="op">
+              <transition name="fade">
+                <p v-if="show" class="text-center">hello</p>
+              </transition>
+               <button class="btn btn-danger pull-left" v-on:click="show = !show">
+                Toggle
+              </button>
+            </div>
+
+            <div id="animation2" class="op">
+              <transition name="slide-fade">
+                <p v-if="show" class="text-center">hello</p>
+              </transition>
+               <button class="btn btn-info pull-right" v-on:click="show = !show">
+                Toggle
+              </button>
+            </div>
+         </div>
+      </div>
+      <script src="./js/animation.js"></script>
+   </body>
+</html>

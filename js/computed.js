@@ -8,9 +8,14 @@ var computed1 = new Vue({
 		reverseString: function(){
 			return this.message.split('').reverse('').join('');
 		},
+
 		now: function () {
 		    return Date.now()
-		  }
+		},
+
+		doAlert: function(){
+		 	alert('When does it load?');
+		}
 	},
 	methods: {
   		reverseMessage: function () {
@@ -29,10 +34,13 @@ var computed2 = new Vue({
 	},
 	watch :{
 		firstName : function(val){
-			this.fullName = val +' ' +this.firstName;
+			this.fullName = val +' ' +this.lastName ;
 		},
 		lastName : function(val){
-			this.fullName = this.firstName + ' ' + val
+			this.fullName = this.firstName + ' ' + val ;
+		},
+		anotherOne: function(){
+			console.log('It is changed also');
 		}
 	}
 });
